@@ -1,1 +1,0 @@
-import"./purify.es.CUNjLwpj.js";const n=window.location.pathname.split("/").filter(Boolean),t=n.indexOf("features-and-bugs");t>=0&&n[t+1];async function e(){}document.getElementById("comments-list");document.getElementById("no-comments");e();
