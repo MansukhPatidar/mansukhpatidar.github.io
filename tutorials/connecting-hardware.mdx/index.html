@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Connecting Your NoWires Board</title><meta name="description" content="Register, pair, and connect your physical NoWires board — learn about cloud and LAN connections, status indicators, and troubleshooting."><link rel="canonical" href="https://nowires.ai/tutorials/connecting-hardware.mdx/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Connecting Your NoWires Board"><meta property="og:description" content="Register, pair, and connect your physical NoWires board — learn about cloud and LAN connections, status indicators, and troubleshooting."><meta property="og:image" content="https://nowires.ai/og-default.png"><meta property="og:url" content="https://nowires.ai/tutorials/connecting-hardware.mdx/"><meta property="og:site_name" content="NoWires.AI"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Connecting Your NoWires Board"><meta name="twitter:description" content="Register, pair, and connect your physical NoWires board — learn about cloud and LAN connections, status indicators, and troubleshooting."><meta name="twitter:image" content="https://nowires.ai/og-default.png"><!-- JSON-LD --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Connecting Your NoWires Board","description":"Register, pair, and connect your physical NoWires board — learn about cloud and LAN connections, status indicators, and troubleshooting.","url":"https://nowires.ai/tutorials/connecting-hardware.mdx/"}</script><link rel="stylesheet" href="/_astro/about.DOhiZHha.css"></head> <body class="min-h-screen antialiased"> <header class="sticky top-0 z-50 border-b border-white/10 bg-[#0a0d14]/90 backdrop-blur-md"> <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6"> <!-- Logo --> <a href="/" class="flex items-center gap-2 font-bold text-white"> <img src="/favicon.svg" width="28" height="28" alt="NoWires.AI"> <span class="text-[15px] tracking-tight">NoWires<span class="text-amber-400">.AI</span></span> </a> <!-- Desktop Nav --> <nav class="hidden items-center gap-6 md:flex"> <a href="/features" class="text-sm text-slate-400 transition-colors hover:text-white"> Features </a><a href="/community" class="text-sm text-slate-400 transition-colors hover:text-white"> Community </a><a href="/pricing" class="text-sm text-slate-400 transition-colors hover:text-white"> Pricing </a><a href="/tutorials" class="text-sm text-slate-400 transition-colors hover:text-white"> Tutorials </a><a href="/blog" class="text-sm text-slate-400 transition-colors hover:text-white"> Blog </a><a href="/about" class="text-sm text-slate-400 transition-colors hover:text-white"> About </a> </nav> <!-- CTAs --> <div class="flex items-center gap-3"> <a href="/app" class="hidden rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:text-white sm:block">
+Sign in
+</a> <a href="/app" class="rounded-md bg-blue-500 px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-blue-400">
+Open App
+</a> <!-- Mobile hamburger --> <button id="menu-toggle" class="ml-2 text-slate-400 md:hidden" aria-label="Toggle menu"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <line x1="3" y1="6" x2="21" y2="6"></line> <line x1="3" y1="12" x2="21" y2="12"></line> <line x1="3" y1="18" x2="21" y2="18"></line> </svg> </button> </div> </div> <!-- Mobile menu --> <div id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-4 pt-2 md:hidden"> <a href="/features" class="block py-2 text-sm text-slate-400 hover:text-white"> Features </a><a href="/community" class="block py-2 text-sm text-slate-400 hover:text-white"> Community </a><a href="/pricing" class="block py-2 text-sm text-slate-400 hover:text-white"> Pricing </a><a href="/tutorials" class="block py-2 text-sm text-slate-400 hover:text-white"> Tutorials </a><a href="/blog" class="block py-2 text-sm text-slate-400 hover:text-white"> Blog </a><a href="/about" class="block py-2 text-sm text-slate-400 hover:text-white"> About </a> </div> </header> <script type="module">const e=document.getElementById("menu-toggle"),t=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{t?.classList.toggle("hidden")});</script> <main>  <article class="mx-auto max-w-2xl px-4 py-16 sm:px-6"> <div class="mb-4 flex items-center gap-3"> <span class="rounded-full border px-2 py-0.5 text-xs font-medium text-yellow-400 bg-yellow-400/10 border-yellow-400/30"> intermediate </span> <span class="text-sm text-slate-500">10 min</span> </div> <h1 class="mb-3 text-4xl font-bold text-white">Connecting Your NoWires Board</h1> <p class="mb-8 text-lg text-slate-400">Register, pair, and connect your physical NoWires board — learn about cloud and LAN connections, status indicators, and troubleshooting.</p>  <div class="prose prose-invert prose-slate max-w-none prose-headings:text-white prose-a:text-blue-400 prose-code:text-blue-300 prose-pre:bg-[#111827]"> <h1 id="connecting-your-nowires-board">Connecting Your NoWires Board</h1>
+<p>The NoWires hardware board bridges the gap between virtual design and real circuits. Once connected, your software design controls real hardware — and real measurements flow back to your screen.</p>
+<h2 id="what-youll-learn">What you’ll learn</h2>
+<ul>
+<li>What the NoWires hardware board is</li>
+<li>How to register a device with the challenge code</li>
+<li>Pairing and unpairing devices</li>
+<li>Understanding the connection status indicator</li>
+<li>How cloud and LAN connections work</li>
+<li>Troubleshooting common connection issues</li>
+</ul>
+<hr/>
+<h2 id="1-what-is-the-nowires-hardware-board">1. What is the NoWires hardware board?</h2>
+<p>The NoWires board is a physical device that sits alongside your real breadboard. It:</p>
+<ul>
+<li>Reads voltage and current measurements from your circuit</li>
+<li>Communicates wirelessly with the NoWires.AI app</li>
+<li>Has a small display showing its status and a challenge code for pairing</li>
+<li>Connects over WiFi — no USB cables needed</li>
+</ul>
+<p>Think of it as a smart multimeter that’s always connected to your breadboard.</p>
+<hr/>
+<h2 id="2-open-the-boards-drawer">2. Open the Boards drawer</h2>
+<p>Click the <strong>Boards</strong> icon in the sidebar to open the Boards drawer. This is your hub for managing all connected hardware devices.</p>
+<p>If you haven’t registered any devices yet, you’ll see a prompt to add one.</p>
+<p><img src="/images/tutorials/connecting-hardware/boards-drawer.png" alt="Boards drawer showing registered devices with status indicators and action buttons"/></p>
+<hr/>
+<h2 id="3-register-a-device">3. Register a device</h2>
+<p>To link your physical board to your account:</p>
+<ol>
+<li>Power on your NoWires board.</li>
+<li>Look at the board’s display — it shows a <strong>challenge code</strong> (a short alphanumeric code).</li>
+<li>In the Boards drawer, click <strong>Register Device</strong>.</li>
+<li>Enter the challenge code from the display.</li>
+<li>Click <strong>Submit</strong>.</li>
+</ol>
+<p>The board is now registered to your account and appears in the Boards drawer.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> The challenge code changes periodically for security. Enter it promptly after powering on the board.</p>
+</blockquote>
+<p><img src="/images/tutorials/connecting-hardware/register-device.png" alt="Registration flow — the physical board's display showing a challenge code, and the code entry form in the app"/></p>
+<hr/>
+<h2 id="4-pair-and-unpair-devices">4. Pair and unpair devices</h2>
+<p>Once registered, you can pair a device to your current project:</p>
+<ul>
+<li><strong>Pair</strong> — click the <strong>Use</strong> button next to the device in the Boards drawer. The device is now linked to your active project and will send/receive data.</li>
+<li><strong>Unpair</strong> — click the button again to disconnect the device from the current project.</li>
+</ul>
+<p>You can register multiple devices but only pair one to a project at a time.</p>
+<hr/>
+<h2 id="5-connection-status-indicator">5. Connection status indicator</h2>
+<p>The Boards drawer shows a status dot next to each device:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Indicator</th><th>Meaning</th></tr></thead><tbody><tr><td>🟢 <strong>Green dot</strong></td><td>Connected — the device is online and communicating</td></tr><tr><td>🔴 <strong>Red dot</strong></td><td>Disconnected — the device is offline or unreachable</td></tr></tbody></table>
+<p>The status updates in real time based on heartbeat signals from the device.</p>
+<p><img src="/images/tutorials/connecting-hardware/status-indicators.png" alt="Green dot next to a connected device vs. red dot next to a disconnected device"/></p>
+<hr/>
+<h2 id="6-how-connection-works">6. How connection works</h2>
+<p>Your NoWires board connects through two paths:</p>
+<h3 id="cloud-connection-supabase-realtime">Cloud connection (Supabase Realtime)</h3>
+<ul>
+<li>Works from anywhere with internet</li>
+<li>The board and the app both connect to the Supabase Realtime service</li>
+<li>Messages are relayed through the cloud</li>
+<li>Slightly higher latency but works across networks</li>
+</ul>
+<h3 id="local-connection-lan-websocket">Local connection (LAN WebSocket)</h3>
+<ul>
+<li>Works when the board and your computer are on the same WiFi network</li>
+<li>Direct WebSocket connection for low latency</li>
+<li>Faster measurement updates</li>
+<li>Falls back to cloud if local connection isn’t available</li>
+</ul>
+<p>The app automatically uses the best available connection.</p>
+<p><img src="/images/tutorials/connecting-hardware/connection-paths.png" alt="Connection paths — cloud via Supabase Realtime and local via direct LAN WebSocket"/></p>
+<hr/>
+<h2 id="7-troubleshooting">7. Troubleshooting</h2>
+<h3 id="board-wont-connect">Board won’t connect</h3>
+<ol>
+<li><strong>Check WiFi</strong> — make sure the board is connected to your WiFi network. If the board’s display shows a WiFi setup screen, it needs to be configured first.</li>
+<li><strong>Same network</strong> — for LAN connections, ensure your computer and the board are on the same WiFi network.</li>
+<li><strong>Power cycle</strong> — turn the board off and on again. It will reconnect automatically.</li>
+</ol>
+<h3 id="connection-drops-frequently">Connection drops frequently</h3>
+<ul>
+<li><strong>WiFi signal</strong> — move the board closer to your router</li>
+<li><strong>Network congestion</strong> — the board uses minimal bandwidth, but a congested network can cause delays</li>
+<li><strong>Heartbeat</strong> — the board sends periodic heartbeats. If several are missed, the status changes to disconnected. It reconnects automatically when communication resumes.</li>
+</ul>
+<h3 id="challenge-code-expired">Challenge code expired</h3>
+<p>Power cycle the board to get a fresh challenge code, then try registering again.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> The board reconnects automatically after brief network interruptions. If the status dot turns red, give it a few seconds before troubleshooting.</p>
+</blockquote>
+<hr/>
+<h2 id="what-you-learned">What you learned</h2>
+<ul>
+<li>What the NoWires hardware board does</li>
+<li>How to register a device using the challenge code</li>
+<li>Pairing a device to your project</li>
+<li>Reading the connection status indicator</li>
+<li>How cloud (Supabase Realtime) and LAN (WebSocket) connections work</li>
+<li>Common troubleshooting steps for connection issues</li>
+</ul>
+<h2 id="next-up">Next up</h2>
+<p>Your board is connected — now use it. Learn about real-time measurements in <a href="/tutorials/run-mode-and-measurements.mdx">Run Mode &amp; Live Measurements</a>.</p> </div> <div class="mt-12 border-t border-white/10 pt-8"> <a href="/tutorials" class="text-sm text-blue-400 hover:underline">← Back to Tutorials</a> </div> </article>  </main> <footer class="border-t border-white/10 bg-[#0a0d14]"> <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6"> <div class="grid grid-cols-2 gap-8 md:grid-cols-4"> <!-- Brand --> <div class="col-span-2 md:col-span-1"> <a href="/" class="text-lg font-bold text-white">
+NoWires<span class="text-amber-400">.AI</span> </a> <p class="mt-3 text-sm text-slate-500">
+Build smarter circuits with AI. Virtual breadboard meets real hardware.
+</p> <!-- Socials --> <div class="mt-4 flex gap-3"> <a href="https://twitter.com/nowires_ai" class="text-slate-500 hover:text-white" aria-label="Twitter/X"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path> </svg> </a> </div> </div> <div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Product</h3> <ul class="space-y-2"> <li> <a href="/features" class="text-sm text-slate-400 hover:text-white">Features</a> </li><li> <a href="/pricing" class="text-sm text-slate-400 hover:text-white">Pricing</a> </li><li> <a href="/app" class="text-sm text-slate-400 hover:text-white">Open App</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Resources</h3> <ul class="space-y-2"> <li> <a href="/tutorials" class="text-sm text-slate-400 hover:text-white">Tutorials</a> </li><li> <a href="/blog" class="text-sm text-slate-400 hover:text-white">Blog</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Company</h3> <ul class="space-y-2"> <li> <a href="/about" class="text-sm text-slate-400 hover:text-white">About</a> </li><li> <a href="/contact" class="text-sm text-slate-400 hover:text-white">Contact</a> </li> </ul> </div> </div> <div class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-slate-600">
+© 2026 NoWires.AI — Built with ❤️ for makers
+</div> </div> </footer> </body></html>

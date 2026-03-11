@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Placing Components — NoWires.AI</title><meta name="description" content="Learn how to browse the parts library, drag components onto the board, and arrange them with rotate, flip, lock, and delete."><link rel="canonical" href="https://nowires.ai/tutorials/placing-components.mdx/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Placing Components — NoWires.AI"><meta property="og:description" content="Learn how to browse the parts library, drag components onto the board, and arrange them with rotate, flip, lock, and delete."><meta property="og:image" content="https://nowires.ai/og-default.png"><meta property="og:url" content="https://nowires.ai/tutorials/placing-components.mdx/"><meta property="og:site_name" content="NoWires.AI"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Placing Components — NoWires.AI"><meta name="twitter:description" content="Learn how to browse the parts library, drag components onto the board, and arrange them with rotate, flip, lock, and delete."><meta name="twitter:image" content="https://nowires.ai/og-default.png"><!-- JSON-LD --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Placing Components — NoWires.AI","description":"Learn how to browse the parts library, drag components onto the board, and arrange them with rotate, flip, lock, and delete.","url":"https://nowires.ai/tutorials/placing-components.mdx/"}</script><link rel="stylesheet" href="/_astro/about.DOhiZHha.css"></head> <body class="min-h-screen antialiased"> <header class="sticky top-0 z-50 border-b border-white/10 bg-[#0a0d14]/90 backdrop-blur-md"> <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6"> <!-- Logo --> <a href="/" class="flex items-center gap-2 font-bold text-white"> <img src="/favicon.svg" width="28" height="28" alt="NoWires.AI"> <span class="text-[15px] tracking-tight">NoWires<span class="text-amber-400">.AI</span></span> </a> <!-- Desktop Nav --> <nav class="hidden items-center gap-6 md:flex"> <a href="/features" class="text-sm text-slate-400 transition-colors hover:text-white"> Features </a><a href="/community" class="text-sm text-slate-400 transition-colors hover:text-white"> Community </a><a href="/pricing" class="text-sm text-slate-400 transition-colors hover:text-white"> Pricing </a><a href="/tutorials" class="text-sm text-slate-400 transition-colors hover:text-white"> Tutorials </a><a href="/blog" class="text-sm text-slate-400 transition-colors hover:text-white"> Blog </a><a href="/about" class="text-sm text-slate-400 transition-colors hover:text-white"> About </a> </nav> <!-- CTAs --> <div class="flex items-center gap-3"> <a href="/app" class="hidden rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:text-white sm:block">
+Sign in
+</a> <a href="/app" class="rounded-md bg-blue-500 px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-blue-400">
+Open App
+</a> <!-- Mobile hamburger --> <button id="menu-toggle" class="ml-2 text-slate-400 md:hidden" aria-label="Toggle menu"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <line x1="3" y1="6" x2="21" y2="6"></line> <line x1="3" y1="12" x2="21" y2="12"></line> <line x1="3" y1="18" x2="21" y2="18"></line> </svg> </button> </div> </div> <!-- Mobile menu --> <div id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-4 pt-2 md:hidden"> <a href="/features" class="block py-2 text-sm text-slate-400 hover:text-white"> Features </a><a href="/community" class="block py-2 text-sm text-slate-400 hover:text-white"> Community </a><a href="/pricing" class="block py-2 text-sm text-slate-400 hover:text-white"> Pricing </a><a href="/tutorials" class="block py-2 text-sm text-slate-400 hover:text-white"> Tutorials </a><a href="/blog" class="block py-2 text-sm text-slate-400 hover:text-white"> Blog </a><a href="/about" class="block py-2 text-sm text-slate-400 hover:text-white"> About </a> </div> </header> <script type="module">const e=document.getElementById("menu-toggle"),t=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{t?.classList.toggle("hidden")});</script> <main>  <article class="mx-auto max-w-2xl px-4 py-16 sm:px-6"> <div class="mb-4 flex items-center gap-3"> <span class="rounded-full border px-2 py-0.5 text-xs font-medium text-green-400 bg-green-400/10 border-green-400/30"> beginner </span> <span class="text-sm text-slate-500">10 min</span> </div> <h1 class="mb-3 text-4xl font-bold text-white">Placing Components</h1> <p class="mb-8 text-lg text-slate-400">Learn how to browse the parts library, drag components onto the board, and arrange them with rotate, flip, lock, and delete.</p>  <div class="prose prose-invert prose-slate max-w-none prose-headings:text-white prose-a:text-blue-400 prose-code:text-blue-300 prose-pre:bg-[#111827]"> <h1 id="placing-components">Placing Components</h1>
+<p>Components are the building blocks of every circuit. This tutorial shows you how to find, place, and arrange them on your board.</p>
+<h2 id="what-youll-learn">What you’ll learn</h2>
+<ul>
+<li>How to open and browse the Parts drawer</li>
+<li>Placing a component on the board</li>
+<li>Moving, rotating, flipping, and locking components</li>
+<li>Deleting components</li>
+<li>The “Move with connections” setting</li>
+</ul>
+<hr/>
+<h2 id="1-open-the-parts-drawer">1. Open the Parts drawer</h2>
+<p>Click the <strong>Parts</strong> icon in the sidebar (the top icon). The Parts drawer slides open, showing all available components organized by category:</p>
+<ul>
+<li><strong>System</strong> — built-in components like resistors, capacitors, LEDs, ICs, and more</li>
+<li><strong>My Library</strong> — custom components you’ve created (more on this in <a href="/tutorials/creating-custom-components.mdx">Creating Custom Components</a>)</li>
+<li><strong>Community</strong> — components shared by other users</li>
+</ul>
+<p>Browse by scrolling, or use the search bar at the top to find a specific part.</p>
+<p><img src="/images/tutorials/placing-components/parts-drawer.png" alt="Parts drawer showing System, My Library, and Community tabs with a search bar and component list"/></p>
+<hr/>
+<h2 id="2-drag-a-component-onto-the-board">2. Drag a component onto the board</h2>
+<ol>
+<li>Find the component you want (e.g., a resistor).</li>
+<li>Click and drag it from the Parts drawer onto the board canvas.</li>
+<li>Release the mouse button to place it.</li>
+</ol>
+<p>The component snaps to the breadboard grid automatically. Its pins align with the holes on the board.</p>
+<p><img src="/images/tutorials/placing-components/drag-and-place.png" alt="Dragging a resistor from the Parts drawer onto the board — it snaps to the grid on release"/></p>
+<hr/>
+<h2 id="3-move-a-component-after-placing">3. Move a component after placing</h2>
+<p>Already placed a component but want it somewhere else?</p>
+<ol>
+<li>Make sure you’re in <strong>Select</strong> mode (press <strong>V</strong> or click the arrow tool in the toolbar).</li>
+<li>Click the component to select it — you’ll see a highlight around it.</li>
+<li>Drag it to its new position on the board.</li>
+</ol>
+<p>The component snaps to the nearest valid grid position when you release.</p>
+<p><img src="/images/tutorials/placing-components/selected-component.png" alt="A selected component with a highlight outline, ready to be dragged to a new position"/></p>
+<hr/>
+<h2 id="4-rotate-a-component">4. Rotate a component</h2>
+<p>To rotate a placed component:</p>
+<ol>
+<li><strong>Right-click</strong> the component to open the context menu.</li>
+<li>Click <strong>Rotate</strong>.</li>
+</ol>
+<p>The component rotates 90° clockwise. Repeat to continue rotating.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> Rotation is essential for fitting DIP packages and ICs across the center channel of the breadboard.</p>
+</blockquote>
+<p><img src="/images/tutorials/placing-components/rotate-component.png" alt="Right-click context menu with Rotate option, and the component before and after a 90° rotation"/></p>
+<hr/>
+<h2 id="5-flip-a-component">5. Flip a component</h2>
+<p>Some components look different from the front and back. To flip horizontally:</p>
+<ol>
+<li><strong>Right-click</strong> the component.</li>
+<li>Click <strong>Flip</strong>.</li>
+</ol>
+<p>This mirrors the component, which is useful for components where pin orientation matters.</p>
+<hr/>
+<h2 id="6-lock-a-component">6. Lock a component</h2>
+<p>Once you’ve positioned a component exactly where you want it, you can lock it in place:</p>
+<ol>
+<li><strong>Right-click</strong> the component.</li>
+<li>Click <strong>Lock</strong>.</li>
+</ol>
+<p>A locked component can’t be accidentally moved or deleted. To unlock it, right-click and choose <strong>Unlock</strong>.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> Lock your power connections and ICs first, then wire around them. This prevents accidental bumps while you work.</p>
+</blockquote>
+<hr/>
+<h2 id="7-delete-a-component">7. Delete a component</h2>
+<p>Two ways to remove a component:</p>
+<ul>
+<li><strong>Select and delete</strong> — click the component, then press <strong>Delete</strong></li>
+<li><strong>Erase tool</strong> — press <strong>E</strong> to switch to the eraser, then click the component</li>
+</ul>
+<p>Both methods remove the component and any wires connected to it.</p>
+<hr/>
+<h2 id="8-move-with-connections-setting">8. “Move with connections” setting</h2>
+<p>By default, when you move a component, its connected wires move with it. If you prefer wires to stay in place:</p>
+<ol>
+<li>Open <strong>Settings</strong> (gear icon in the sidebar).</li>
+<li>Toggle <strong>Move with connections</strong> off.</li>
+</ol>
+<p>With this off, moving a component disconnects it from its wires. Most users prefer to keep this on.</p>
+<p><img src="/images/tutorials/placing-components/move-with-connections.png" alt="Move with connections ON — wires follow the component vs. OFF — wires stay in place"/></p>
+<hr/>
+<h2 id="what-you-learned">What you learned</h2>
+<ul>
+<li>How to browse System, My Library, and Community parts</li>
+<li>Dragging components from the drawer onto the board</li>
+<li>Moving, rotating, flipping, and locking components</li>
+<li>Deleting components with Delete key or the erase tool</li>
+<li>How “Move with connections” affects component movement</li>
+</ul>
+<h2 id="next-up">Next up</h2>
+<p>Components are on the board — now connect them. Learn about wires, nets, and power rails in <a href="/tutorials/wiring-and-nets.mdx">Wiring &amp; Nets</a>.</p> </div> <div class="mt-12 border-t border-white/10 pt-8"> <a href="/tutorials" class="text-sm text-blue-400 hover:underline">← Back to Tutorials</a> </div> </article>  </main> <footer class="border-t border-white/10 bg-[#0a0d14]"> <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6"> <div class="grid grid-cols-2 gap-8 md:grid-cols-4"> <!-- Brand --> <div class="col-span-2 md:col-span-1"> <a href="/" class="text-lg font-bold text-white">
+NoWires<span class="text-amber-400">.AI</span> </a> <p class="mt-3 text-sm text-slate-500">
+Build smarter circuits with AI. Virtual breadboard meets real hardware.
+</p> <!-- Socials --> <div class="mt-4 flex gap-3"> <a href="https://twitter.com/nowires_ai" class="text-slate-500 hover:text-white" aria-label="Twitter/X"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path> </svg> </a> </div> </div> <div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Product</h3> <ul class="space-y-2"> <li> <a href="/features" class="text-sm text-slate-400 hover:text-white">Features</a> </li><li> <a href="/pricing" class="text-sm text-slate-400 hover:text-white">Pricing</a> </li><li> <a href="/app" class="text-sm text-slate-400 hover:text-white">Open App</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Resources</h3> <ul class="space-y-2"> <li> <a href="/tutorials" class="text-sm text-slate-400 hover:text-white">Tutorials</a> </li><li> <a href="/blog" class="text-sm text-slate-400 hover:text-white">Blog</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Company</h3> <ul class="space-y-2"> <li> <a href="/about" class="text-sm text-slate-400 hover:text-white">About</a> </li><li> <a href="/contact" class="text-sm text-slate-400 hover:text-white">Contact</a> </li> </ul> </div> </div> <div class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-slate-600">
+© 2026 NoWires.AI — Built with ❤️ for makers
+</div> </div> </footer> </body></html>

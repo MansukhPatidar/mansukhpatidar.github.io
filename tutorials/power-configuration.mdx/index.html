@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Power Configuration — NoWires.AI</title><meta name="description" content="Set up your board's power rails — configure voltage, current limits, and bottom rail modes for different circuit requirements."><link rel="canonical" href="https://nowires.ai/tutorials/power-configuration.mdx/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Power Configuration — NoWires.AI"><meta property="og:description" content="Set up your board's power rails — configure voltage, current limits, and bottom rail modes for different circuit requirements."><meta property="og:image" content="https://nowires.ai/og-default.png"><meta property="og:url" content="https://nowires.ai/tutorials/power-configuration.mdx/"><meta property="og:site_name" content="NoWires.AI"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Power Configuration — NoWires.AI"><meta name="twitter:description" content="Set up your board's power rails — configure voltage, current limits, and bottom rail modes for different circuit requirements."><meta name="twitter:image" content="https://nowires.ai/og-default.png"><!-- JSON-LD --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Power Configuration — NoWires.AI","description":"Set up your board's power rails — configure voltage, current limits, and bottom rail modes for different circuit requirements.","url":"https://nowires.ai/tutorials/power-configuration.mdx/"}</script><link rel="stylesheet" href="/_astro/about.DOhiZHha.css"></head> <body class="min-h-screen antialiased"> <header class="sticky top-0 z-50 border-b border-white/10 bg-[#0a0d14]/90 backdrop-blur-md"> <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6"> <!-- Logo --> <a href="/" class="flex items-center gap-2 font-bold text-white"> <img src="/favicon.svg" width="28" height="28" alt="NoWires.AI"> <span class="text-[15px] tracking-tight">NoWires<span class="text-amber-400">.AI</span></span> </a> <!-- Desktop Nav --> <nav class="hidden items-center gap-6 md:flex"> <a href="/features" class="text-sm text-slate-400 transition-colors hover:text-white"> Features </a><a href="/community" class="text-sm text-slate-400 transition-colors hover:text-white"> Community </a><a href="/pricing" class="text-sm text-slate-400 transition-colors hover:text-white"> Pricing </a><a href="/tutorials" class="text-sm text-slate-400 transition-colors hover:text-white"> Tutorials </a><a href="/blog" class="text-sm text-slate-400 transition-colors hover:text-white"> Blog </a><a href="/about" class="text-sm text-slate-400 transition-colors hover:text-white"> About </a> </nav> <!-- CTAs --> <div class="flex items-center gap-3"> <a href="/app" class="hidden rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:text-white sm:block">
+Sign in
+</a> <a href="/app" class="rounded-md bg-blue-500 px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-blue-400">
+Open App
+</a> <!-- Mobile hamburger --> <button id="menu-toggle" class="ml-2 text-slate-400 md:hidden" aria-label="Toggle menu"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <line x1="3" y1="6" x2="21" y2="6"></line> <line x1="3" y1="12" x2="21" y2="12"></line> <line x1="3" y1="18" x2="21" y2="18"></line> </svg> </button> </div> </div> <!-- Mobile menu --> <div id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-4 pt-2 md:hidden"> <a href="/features" class="block py-2 text-sm text-slate-400 hover:text-white"> Features </a><a href="/community" class="block py-2 text-sm text-slate-400 hover:text-white"> Community </a><a href="/pricing" class="block py-2 text-sm text-slate-400 hover:text-white"> Pricing </a><a href="/tutorials" class="block py-2 text-sm text-slate-400 hover:text-white"> Tutorials </a><a href="/blog" class="block py-2 text-sm text-slate-400 hover:text-white"> Blog </a><a href="/about" class="block py-2 text-sm text-slate-400 hover:text-white"> About </a> </div> </header> <script type="module">const e=document.getElementById("menu-toggle"),t=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{t?.classList.toggle("hidden")});</script> <main>  <article class="mx-auto max-w-2xl px-4 py-16 sm:px-6"> <div class="mb-4 flex items-center gap-3"> <span class="rounded-full border px-2 py-0.5 text-xs font-medium text-yellow-400 bg-yellow-400/10 border-yellow-400/30"> intermediate </span> <span class="text-sm text-slate-500">10 min</span> </div> <h1 class="mb-3 text-4xl font-bold text-white">Power Configuration</h1> <p class="mb-8 text-lg text-slate-400">Set up your board&#39;s power rails — configure voltage, current limits, and bottom rail modes for different circuit requirements.</p>  <div class="prose prose-invert prose-slate max-w-none prose-headings:text-white prose-a:text-blue-400 prose-code:text-blue-300 prose-pre:bg-[#111827]"> <h1 id="power-configuration">Power Configuration</h1>
+<p>Every circuit needs power. NoWires.AI lets you configure exactly how voltage is delivered through your breadboard’s power rails — just like choosing a bench power supply in a real lab.</p>
+<h2 id="what-youll-learn">What you’ll learn</h2>
+<ul>
+<li>How to access power settings</li>
+<li>Configuring the top rail voltage and current</li>
+<li>The four bottom rail modes and when to use each</li>
+<li>How power rails map to the board visually</li>
+<li>Practical examples for common circuit types</li>
+</ul>
+<hr/>
+<h2 id="1-access-power-settings">1. Access power settings</h2>
+<ol>
+<li>Open your <strong>Project Properties</strong> (click the project name in the toolbar, or use the Project Organizer).</li>
+<li>Find the <strong>Power</strong> section.</li>
+</ol>
+<p>Here you’ll see controls for the top rail and bottom rail configurations.</p>
+<p><img src="/images/tutorials/power-configuration/power-settings-panel.png" alt="Power section in Project Properties showing voltage, current, and rail mode controls"/></p>
+<hr/>
+<h2 id="2-top-rail-voltage-and-current">2. Top rail: voltage and current</h2>
+<p>The top power rail is your primary power source. You can configure:</p>
+<ul>
+<li><strong>Voltage</strong> — set the supply voltage (e.g., 3.3V, 5V, 9V, 12V)</li>
+<li><strong>Max current</strong> — set the current limit in milliamps</li>
+</ul>
+<p>These values determine what appears on the red (+) rail along the top of the board.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> Match these settings to your actual power supply when using a physical NoWires board. Common values are 3.3V for ESP32 projects and 5V for Arduino projects.</p>
+</blockquote>
+<hr/>
+<h2 id="3-bottom-rail-modes">3. Bottom rail modes</h2>
+<p>The bottom rail can operate in four different modes, depending on your circuit’s needs:</p>
+<h3 id="same-as-top-both-positive">Same as top (both positive)</h3>
+<p>Both the top and bottom rails carry the same positive voltage. Use this when you need easy power access on both sides of the board without jumping wires across.</p>
+<p><strong>When to use:</strong> Simple circuits where you want convenient power on both edges.</p>
+<h3 id="common-ground-gnd">Common ground (GND)</h3>
+<p>The bottom rail becomes ground (0V). This is the most common configuration.</p>
+<p><strong>When to use:</strong> Most digital circuits, Arduino projects, single-supply analog circuits. Your components connect to the top rail for power and the bottom rail for ground.</p>
+<h3 id="negative-rail-dual-supply">Negative rail (dual supply)</h3>
+<p>The bottom rail carries a negative voltage (e.g., −5V). Combined with the positive top rail, this gives you a dual-supply configuration.</p>
+<p><strong>When to use:</strong> Op-amp circuits, audio amplifiers, or any analog design that needs both positive and negative voltage rails.</p>
+<h3 id="disconnected-floating">Disconnected (floating)</h3>
+<p>The bottom rail has no electrical connection — it’s completely inactive.</p>
+<p><strong>When to use:</strong> When you only need one power rail, or when you want to use the bottom rail holes for general-purpose connections without any power implications.</p>
+<p><img src="/images/tutorials/power-configuration/bottom-rail-modes.png" alt="The four bottom rail modes compared — Same as top, Common ground, Negative rail, Disconnected"/></p>
+<hr/>
+<h2 id="4-how-power-rails-map-to-the-board">4. How power rails map to the board</h2>
+<p>Once configured, the board visually reflects your power settings:</p>
+<ul>
+<li><strong>Top + rail</strong> (red) — carries your configured positive voltage</li>
+<li><strong>Top − rail</strong> (black) — typically ground, but depends on your configuration</li>
+<li><strong>Bottom + rail</strong> (red) — mirrors or differs from the top, based on your chosen mode</li>
+<li><strong>Bottom − rail</strong> (black) — follows the bottom rail mode setting</li>
+</ul>
+<p>The rail labels on the board update to show the actual voltages, so you always know what voltage is on each rail.</p>
+<p><img src="/images/tutorials/power-configuration/rails-on-board.png" alt="Board with power rail labels showing configured voltages on each rail"/></p>
+<hr/>
+<h2 id="5-practical-examples">5. Practical examples</h2>
+<h3 id="arduino-uno-project-5v-single-supply">Arduino Uno project (5V single supply)</h3>
+<ul>
+<li>Top rail: <strong>5V</strong>, 500mA</li>
+<li>Bottom rail mode: <strong>Common ground</strong></li>
+<li>Result: +5V on top, GND on bottom — clean and simple</li>
+</ul>
+<h3 id="esp32-project-33v-single-supply">ESP32 project (3.3V single supply)</h3>
+<ul>
+<li>Top rail: <strong>3.3V</strong>, 300mA</li>
+<li>Bottom rail mode: <strong>Common ground</strong></li>
+<li>Result: +3.3V on top, GND on bottom</li>
+</ul>
+<h3 id="op-amp-audio-circuit-dual-9v-supply">Op-amp audio circuit (dual ±9V supply)</h3>
+<ul>
+<li>Top rail: <strong>9V</strong>, 200mA</li>
+<li>Bottom rail mode: <strong>Negative rail</strong> (−9V)</li>
+<li>Result: +9V on top, −9V on bottom, with ground wired to the center channel</li>
+</ul>
+<h3 id="led-testing-single-rail-only">LED testing (single rail only)</h3>
+<ul>
+<li>Top rail: <strong>5V</strong>, 100mA</li>
+<li>Bottom rail mode: <strong>Disconnected</strong></li>
+<li>Result: Only the top rail is active — bottom holes are free for general wiring</li>
+</ul>
+<hr/>
+<h2 id="what-you-learned">What you learned</h2>
+<ul>
+<li>Where to find power configuration in project properties</li>
+<li>Setting voltage and current limits on the top rail</li>
+<li>The four bottom rail modes: same as top, common ground, negative, and disconnected</li>
+<li>How rail settings appear visually on the board</li>
+<li>Which mode to use for common circuit types</li>
+</ul>
+<h2 id="next-up">Next up</h2>
+<p>Build your own parts. Learn to design custom components in <a href="/tutorials/creating-custom-components.mdx">Creating Custom Components</a>.</p> </div> <div class="mt-12 border-t border-white/10 pt-8"> <a href="/tutorials" class="text-sm text-blue-400 hover:underline">← Back to Tutorials</a> </div> </article>  </main> <footer class="border-t border-white/10 bg-[#0a0d14]"> <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6"> <div class="grid grid-cols-2 gap-8 md:grid-cols-4"> <!-- Brand --> <div class="col-span-2 md:col-span-1"> <a href="/" class="text-lg font-bold text-white">
+NoWires<span class="text-amber-400">.AI</span> </a> <p class="mt-3 text-sm text-slate-500">
+Build smarter circuits with AI. Virtual breadboard meets real hardware.
+</p> <!-- Socials --> <div class="mt-4 flex gap-3"> <a href="https://twitter.com/nowires_ai" class="text-slate-500 hover:text-white" aria-label="Twitter/X"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path> </svg> </a> </div> </div> <div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Product</h3> <ul class="space-y-2"> <li> <a href="/features" class="text-sm text-slate-400 hover:text-white">Features</a> </li><li> <a href="/pricing" class="text-sm text-slate-400 hover:text-white">Pricing</a> </li><li> <a href="/app" class="text-sm text-slate-400 hover:text-white">Open App</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Resources</h3> <ul class="space-y-2"> <li> <a href="/tutorials" class="text-sm text-slate-400 hover:text-white">Tutorials</a> </li><li> <a href="/blog" class="text-sm text-slate-400 hover:text-white">Blog</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Company</h3> <ul class="space-y-2"> <li> <a href="/about" class="text-sm text-slate-400 hover:text-white">About</a> </li><li> <a href="/contact" class="text-sm text-slate-400 hover:text-white">Contact</a> </li> </ul> </div> </div> <div class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-slate-600">
+© 2026 NoWires.AI — Built with ❤️ for makers
+</div> </div> </footer> </body></html>

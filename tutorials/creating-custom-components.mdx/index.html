@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Creating Custom Components — NoWires.AI</title><meta name="description" content="Design your own components with the Component Designer — choose a package, set pins, customize appearance, and save to your library."><link rel="canonical" href="https://nowires.ai/tutorials/creating-custom-components.mdx/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Creating Custom Components — NoWires.AI"><meta property="og:description" content="Design your own components with the Component Designer — choose a package, set pins, customize appearance, and save to your library."><meta property="og:image" content="https://nowires.ai/og-default.png"><meta property="og:url" content="https://nowires.ai/tutorials/creating-custom-components.mdx/"><meta property="og:site_name" content="NoWires.AI"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Creating Custom Components — NoWires.AI"><meta name="twitter:description" content="Design your own components with the Component Designer — choose a package, set pins, customize appearance, and save to your library."><meta name="twitter:image" content="https://nowires.ai/og-default.png"><!-- JSON-LD --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Creating Custom Components — NoWires.AI","description":"Design your own components with the Component Designer — choose a package, set pins, customize appearance, and save to your library.","url":"https://nowires.ai/tutorials/creating-custom-components.mdx/"}</script><link rel="stylesheet" href="/_astro/about.DOhiZHha.css"></head> <body class="min-h-screen antialiased"> <header class="sticky top-0 z-50 border-b border-white/10 bg-[#0a0d14]/90 backdrop-blur-md"> <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6"> <!-- Logo --> <a href="/" class="flex items-center gap-2 font-bold text-white"> <img src="/favicon.svg" width="28" height="28" alt="NoWires.AI"> <span class="text-[15px] tracking-tight">NoWires<span class="text-amber-400">.AI</span></span> </a> <!-- Desktop Nav --> <nav class="hidden items-center gap-6 md:flex"> <a href="/features" class="text-sm text-slate-400 transition-colors hover:text-white"> Features </a><a href="/community" class="text-sm text-slate-400 transition-colors hover:text-white"> Community </a><a href="/pricing" class="text-sm text-slate-400 transition-colors hover:text-white"> Pricing </a><a href="/tutorials" class="text-sm text-slate-400 transition-colors hover:text-white"> Tutorials </a><a href="/blog" class="text-sm text-slate-400 transition-colors hover:text-white"> Blog </a><a href="/about" class="text-sm text-slate-400 transition-colors hover:text-white"> About </a> </nav> <!-- CTAs --> <div class="flex items-center gap-3"> <a href="/app" class="hidden rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:text-white sm:block">
+Sign in
+</a> <a href="/app" class="rounded-md bg-blue-500 px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-blue-400">
+Open App
+</a> <!-- Mobile hamburger --> <button id="menu-toggle" class="ml-2 text-slate-400 md:hidden" aria-label="Toggle menu"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <line x1="3" y1="6" x2="21" y2="6"></line> <line x1="3" y1="12" x2="21" y2="12"></line> <line x1="3" y1="18" x2="21" y2="18"></line> </svg> </button> </div> </div> <!-- Mobile menu --> <div id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-4 pt-2 md:hidden"> <a href="/features" class="block py-2 text-sm text-slate-400 hover:text-white"> Features </a><a href="/community" class="block py-2 text-sm text-slate-400 hover:text-white"> Community </a><a href="/pricing" class="block py-2 text-sm text-slate-400 hover:text-white"> Pricing </a><a href="/tutorials" class="block py-2 text-sm text-slate-400 hover:text-white"> Tutorials </a><a href="/blog" class="block py-2 text-sm text-slate-400 hover:text-white"> Blog </a><a href="/about" class="block py-2 text-sm text-slate-400 hover:text-white"> About </a> </div> </header> <script type="module">const e=document.getElementById("menu-toggle"),t=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{t?.classList.toggle("hidden")});</script> <main>  <article class="mx-auto max-w-2xl px-4 py-16 sm:px-6"> <div class="mb-4 flex items-center gap-3"> <span class="rounded-full border px-2 py-0.5 text-xs font-medium text-yellow-400 bg-yellow-400/10 border-yellow-400/30"> intermediate </span> <span class="text-sm text-slate-500">12 min</span> </div> <h1 class="mb-3 text-4xl font-bold text-white">Creating Custom Components</h1> <p class="mb-8 text-lg text-slate-400">Design your own components with the Component Designer — choose a package, set pins, customize appearance, and save to your library.</p>  <div class="prose prose-invert prose-slate max-w-none prose-headings:text-white prose-a:text-blue-400 prose-code:text-blue-300 prose-pre:bg-[#111827]"> <h1 id="creating-custom-components">Creating Custom Components</h1>
+<p>The built-in parts library covers common components, but you’ll eventually need something specific — a particular IC, a sensor module, or a custom breakout board. The Component Designer lets you create exactly what you need.</p>
+<h2 id="what-youll-learn">What you’ll learn</h2>
+<ul>
+<li>How to open the Component Designer</li>
+<li>Choosing a package type</li>
+<li>Setting pin count and dimensions</li>
+<li>Customizing appearance</li>
+<li>Naming pins</li>
+<li>Saving to your library</li>
+<li>Placing, editing, and deleting custom components</li>
+</ul>
+<hr/>
+<h2 id="1-open-the-component-designer">1. Open the Component Designer</h2>
+<p>There are two ways to start:</p>
+<ul>
+<li><strong>Create new:</strong> Open the Parts drawer → click the <strong>+</strong> button</li>
+<li><strong>Edit existing:</strong> Find a component in My Library → click the edit icon</li>
+</ul>
+<p>Both open the Component Designer panel.</p>
+<p><img src="/images/tutorials/creating-custom-components/open-designer.png" alt="Parts drawer with the + button highlighted for creating a new component"/></p>
+<hr/>
+<h2 id="2-choose-a-package-type">2. Choose a package type</h2>
+<p>The designer supports several common package styles:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Package</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td><strong>DIP</strong></td><td>Dual Inline Package — pins on two sides</td><td>ATmega328, 555 timer, op-amps</td></tr><tr><td><strong>SIP</strong></td><td>Single Inline Package — pins on one side</td><td>Pin headers, resistor networks</td></tr><tr><td><strong>Axial</strong></td><td>Two-pin, inline</td><td>Resistors, diodes</td></tr><tr><td><strong>Box</strong></td><td>Rectangular body with configurable pins</td><td>Modules, breakout boards</td></tr></tbody></table>
+<p>Select the package type that matches the real-world component you’re modeling.</p>
+<p><img src="/images/tutorials/creating-custom-components/package-types.png" alt="The four package types — DIP (dual row), SIP (single row), Axial (two leads), Box (configurable)"/></p>
+<hr/>
+<h2 id="3-set-pin-count-and-body-dimensions">3. Set pin count and body dimensions</h2>
+<p>After choosing a package:</p>
+<ol>
+<li>Set the <strong>number of pins</strong> — for DIP packages, this is evenly split between the two rows (e.g., 8 pins = 4 per side)</li>
+<li>Adjust <strong>body width</strong> and <strong>height</strong> if needed — the defaults are based on standard sizes for the chosen package type</li>
+</ol>
+<p>The preview updates in real time as you make changes.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> Check the datasheet for your real component to get the correct pin count and package dimensions.</p>
+</blockquote>
+<p><img src="/images/tutorials/creating-custom-components/pin-count-dimensions.png" alt="Pin count and body dimension controls with a live preview of the component"/></p>
+<hr/>
+<h2 id="4-customize-body-color">4. Customize body color</h2>
+<p>Click the <strong>color picker</strong> to change the component body color. This is purely visual but helps with identification on the board:</p>
+<ul>
+<li>Black for ICs</li>
+<li>Brown for resistors</li>
+<li>Blue for capacitors</li>
+<li>Green for custom modules</li>
+<li>Or any color you prefer</li>
+</ul>
+<hr/>
+<h2 id="5-name-each-pin">5. Name each pin</h2>
+<p>This is the most important step for usability. Click on each pin to assign a name:</p>
+<ol>
+<li>Click a pin in the preview.</li>
+<li>Type the pin name (e.g., VCC, GND, OUT, IN1, CLK).</li>
+<li>Press <strong>Enter</strong> or click the next pin.</li>
+</ol>
+<p>Pin names appear as labels on the board when pin labels are enabled, making wiring much easier.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> Use your component’s datasheet to match pin names exactly. This helps anyone reading your circuit (including future you).</p>
+</blockquote>
+<p><img src="/images/tutorials/creating-custom-components/pin-naming.png" alt="Pin naming interface — clicking a pin to assign names like VCC, GND, OUT"/></p>
+<hr/>
+<h2 id="6-add-metadata">6. Add metadata</h2>
+<p>Before saving, fill in the component details:</p>
+<ul>
+<li><strong>Name</strong> — what this component is called (e.g., “ATtiny85”, “DHT22 Sensor”)</li>
+<li><strong>Description</strong> — a brief note about what it does</li>
+<li><strong>Tags</strong> — keywords for searching (e.g., “microcontroller”, “temperature”, “sensor”)</li>
+</ul>
+<hr/>
+<h2 id="7-save-to-my-library">7. Save to My Library</h2>
+<p>Click <strong>Save</strong>. Your component is now stored in the <strong>My Library</strong> section of the Parts drawer. It’s available in every project going forward.</p>
+<hr/>
+<h2 id="8-place-your-custom-component">8. Place your custom component</h2>
+<p>Using a custom component is identical to using a built-in one:</p>
+<ol>
+<li>Open the <strong>Parts</strong> drawer.</li>
+<li>Switch to the <strong>My Library</strong> tab.</li>
+<li>Find your component.</li>
+<li>Drag it onto the board.</li>
+</ol>
+<p>It behaves exactly like a built-in part — you can move, rotate, flip, lock, and wire it.</p>
+<p><img src="/images/tutorials/creating-custom-components/custom-on-board.png" alt="A custom component placed on the board, wired into a circuit like any built-in part"/></p>
+<hr/>
+<h2 id="9-edit-an-existing-custom-component">9. Edit an existing custom component</h2>
+<p>Need to fix a pin name or add a pin?</p>
+<ol>
+<li>Open the <strong>Parts</strong> drawer.</li>
+<li>Go to <strong>My Library</strong>.</li>
+<li>Click the <strong>edit</strong> icon on the component you want to change.</li>
+<li>The Component Designer opens with the current configuration loaded.</li>
+<li>Make your changes.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>Changes apply to future placements. Components already on your boards keep their original configuration.</p>
+<hr/>
+<h2 id="10-delete-a-component-from-your-library">10. Delete a component from your library</h2>
+<ol>
+<li>Open the <strong>Parts</strong> drawer.</li>
+<li>Go to <strong>My Library</strong>.</li>
+<li>Click the <strong>delete</strong> icon on the component.</li>
+<li>Confirm the deletion.</li>
+</ol>
+<p>This removes the component from your library. Instances already placed on boards are not affected.</p>
+<hr/>
+<h2 id="what-you-learned">What you learned</h2>
+<ul>
+<li>Opening the Component Designer via the + button or edit icon</li>
+<li>Choosing between DIP, SIP, Axial, and Box package types</li>
+<li>Setting pin count and body dimensions</li>
+<li>Customizing body color for identification</li>
+<li>Naming pins from the datasheet</li>
+<li>Adding name, description, and tags</li>
+<li>Saving to My Library for use across projects</li>
+<li>Editing and deleting custom components</li>
+</ul>
+<h2 id="next-up">Next up</h2>
+<p>Share your projects with the world. Learn about publishing, browsing, and forking in <a href="/tutorials/sharing-and-community.mdx">Sharing &amp; Community</a>.</p> </div> <div class="mt-12 border-t border-white/10 pt-8"> <a href="/tutorials" class="text-sm text-blue-400 hover:underline">← Back to Tutorials</a> </div> </article>  </main> <footer class="border-t border-white/10 bg-[#0a0d14]"> <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6"> <div class="grid grid-cols-2 gap-8 md:grid-cols-4"> <!-- Brand --> <div class="col-span-2 md:col-span-1"> <a href="/" class="text-lg font-bold text-white">
+NoWires<span class="text-amber-400">.AI</span> </a> <p class="mt-3 text-sm text-slate-500">
+Build smarter circuits with AI. Virtual breadboard meets real hardware.
+</p> <!-- Socials --> <div class="mt-4 flex gap-3"> <a href="https://twitter.com/nowires_ai" class="text-slate-500 hover:text-white" aria-label="Twitter/X"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path> </svg> </a> </div> </div> <div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Product</h3> <ul class="space-y-2"> <li> <a href="/features" class="text-sm text-slate-400 hover:text-white">Features</a> </li><li> <a href="/pricing" class="text-sm text-slate-400 hover:text-white">Pricing</a> </li><li> <a href="/app" class="text-sm text-slate-400 hover:text-white">Open App</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Resources</h3> <ul class="space-y-2"> <li> <a href="/tutorials" class="text-sm text-slate-400 hover:text-white">Tutorials</a> </li><li> <a href="/blog" class="text-sm text-slate-400 hover:text-white">Blog</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Company</h3> <ul class="space-y-2"> <li> <a href="/about" class="text-sm text-slate-400 hover:text-white">About</a> </li><li> <a href="/contact" class="text-sm text-slate-400 hover:text-white">Contact</a> </li> </ul> </div> </div> <div class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-slate-600">
+© 2026 NoWires.AI — Built with ❤️ for makers
+</div> </div> </footer> </body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Wiring &amp; Nets — NoWires.AI</title><meta name="description" content="Draw wires between holes, understand breadboard strips and power rails, and manage nets for clear circuit organization."><link rel="canonical" href="https://nowires.ai/tutorials/wiring-and-nets.mdx/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Wiring &#38; Nets — NoWires.AI"><meta property="og:description" content="Draw wires between holes, understand breadboard strips and power rails, and manage nets for clear circuit organization."><meta property="og:image" content="https://nowires.ai/og-default.png"><meta property="og:url" content="https://nowires.ai/tutorials/wiring-and-nets.mdx/"><meta property="og:site_name" content="NoWires.AI"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Wiring &#38; Nets — NoWires.AI"><meta name="twitter:description" content="Draw wires between holes, understand breadboard strips and power rails, and manage nets for clear circuit organization."><meta name="twitter:image" content="https://nowires.ai/og-default.png"><!-- JSON-LD --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Wiring & Nets — NoWires.AI","description":"Draw wires between holes, understand breadboard strips and power rails, and manage nets for clear circuit organization.","url":"https://nowires.ai/tutorials/wiring-and-nets.mdx/"}</script><link rel="stylesheet" href="/_astro/about.DOhiZHha.css"></head> <body class="min-h-screen antialiased"> <header class="sticky top-0 z-50 border-b border-white/10 bg-[#0a0d14]/90 backdrop-blur-md"> <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6"> <!-- Logo --> <a href="/" class="flex items-center gap-2 font-bold text-white"> <img src="/favicon.svg" width="28" height="28" alt="NoWires.AI"> <span class="text-[15px] tracking-tight">NoWires<span class="text-amber-400">.AI</span></span> </a> <!-- Desktop Nav --> <nav class="hidden items-center gap-6 md:flex"> <a href="/features" class="text-sm text-slate-400 transition-colors hover:text-white"> Features </a><a href="/community" class="text-sm text-slate-400 transition-colors hover:text-white"> Community </a><a href="/pricing" class="text-sm text-slate-400 transition-colors hover:text-white"> Pricing </a><a href="/tutorials" class="text-sm text-slate-400 transition-colors hover:text-white"> Tutorials </a><a href="/blog" class="text-sm text-slate-400 transition-colors hover:text-white"> Blog </a><a href="/about" class="text-sm text-slate-400 transition-colors hover:text-white"> About </a> </nav> <!-- CTAs --> <div class="flex items-center gap-3"> <a href="/app" class="hidden rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:text-white sm:block">
+Sign in
+</a> <a href="/app" class="rounded-md bg-blue-500 px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-blue-400">
+Open App
+</a> <!-- Mobile hamburger --> <button id="menu-toggle" class="ml-2 text-slate-400 md:hidden" aria-label="Toggle menu"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <line x1="3" y1="6" x2="21" y2="6"></line> <line x1="3" y1="12" x2="21" y2="12"></line> <line x1="3" y1="18" x2="21" y2="18"></line> </svg> </button> </div> </div> <!-- Mobile menu --> <div id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-4 pt-2 md:hidden"> <a href="/features" class="block py-2 text-sm text-slate-400 hover:text-white"> Features </a><a href="/community" class="block py-2 text-sm text-slate-400 hover:text-white"> Community </a><a href="/pricing" class="block py-2 text-sm text-slate-400 hover:text-white"> Pricing </a><a href="/tutorials" class="block py-2 text-sm text-slate-400 hover:text-white"> Tutorials </a><a href="/blog" class="block py-2 text-sm text-slate-400 hover:text-white"> Blog </a><a href="/about" class="block py-2 text-sm text-slate-400 hover:text-white"> About </a> </div> </header> <script type="module">const e=document.getElementById("menu-toggle"),t=document.getElementById("mobile-menu");e?.addEventListener("click",()=>{t?.classList.toggle("hidden")});</script> <main>  <article class="mx-auto max-w-2xl px-4 py-16 sm:px-6"> <div class="mb-4 flex items-center gap-3"> <span class="rounded-full border px-2 py-0.5 text-xs font-medium text-green-400 bg-green-400/10 border-green-400/30"> beginner </span> <span class="text-sm text-slate-500">10 min</span> </div> <h1 class="mb-3 text-4xl font-bold text-white">Wiring &amp; Nets</h1> <p class="mb-8 text-lg text-slate-400">Draw wires between holes, understand breadboard strips and power rails, and manage nets for clear circuit organization.</p>  <div class="prose prose-invert prose-slate max-w-none prose-headings:text-white prose-a:text-blue-400 prose-code:text-blue-300 prose-pre:bg-[#111827]"> <h1 id="wiring--nets">Wiring &amp; Nets</h1>
+<p>Wires are how you create electrical connections between components. This tutorial covers drawing wires, understanding how breadboard strips work, and using nets to stay organized.</p>
+<h2 id="what-youll-learn">What you’ll learn</h2>
+<ul>
+<li>How to draw a wire between two holes</li>
+<li>How breadboard strips connect holes automatically</li>
+<li>Viewing and managing nets</li>
+<li>Renaming and deleting wires</li>
+<li>How power rails work</li>
+</ul>
+<hr/>
+<h2 id="1-draw-a-wire">1. Draw a wire</h2>
+<ol>
+<li>Switch to the <strong>Wire</strong> tool by pressing <strong>W</strong> or clicking the wire icon in the toolbar.</li>
+<li>Click on the first hole — it highlights to show it’s selected.</li>
+<li>Click on the second hole — a wire appears connecting the two.</li>
+</ol>
+<p>That’s it. Two clicks, one wire.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> Press <strong>Esc</strong> to cancel a wire you’ve started but don’t want to finish.</p>
+</blockquote>
+<hr/>
+<h2 id="2-how-breadboard-strips-work">2. How breadboard strips work</h2>
+<p>A real breadboard has internal metal strips that connect groups of holes. NoWires.AI replicates this exactly:</p>
+<ul>
+<li><strong>Terminal strips</strong> (rows A–E and F–J) — each group of 5 holes in a column is electrically connected. For example, holes A1 through E1 are all one strip.</li>
+<li><strong>Center channel</strong> — the gap between rows E and F separates the top and bottom halves. A1–E1 is one strip; F1–J1 is a separate strip.</li>
+<li><strong>Power rails</strong> — the long horizontal rows along the top and bottom edges, marked with <strong>+</strong> (red) and <strong>−</strong> (black/blue).</li>
+</ul>
+<p>This means you don’t need to wire every connection manually. If you plug one leg of a resistor into A5 and one leg of an LED into C5, they’re already connected through the strip.</p>
+<p><img src="/images/tutorials/wiring-and-nets/breadboard-strips.png" alt="Breadboard anatomy — terminal strips (A–E and F–J), center channel, and power rails annotated"/></p>
+<hr/>
+<h2 id="3-see-a-net-highlighted">3. See a net highlighted</h2>
+<p>A <strong>net</strong> is a group of holes and wires that are all electrically connected.</p>
+<p>To see a net:</p>
+<ul>
+<li>Hover your cursor over any wire on the board.</li>
+<li>All holes and wires in that same net highlight together.</li>
+</ul>
+<p>This makes it easy to trace connections through your circuit without following individual wires.</p>
+<p><img src="/images/tutorials/wiring-and-nets/net-highlight.png" alt="Hovering over a wire highlights the entire net — all connected holes and wires glow"/></p>
+<hr/>
+<h2 id="4-the-nets-drawer">4. The Nets drawer</h2>
+<p>Click the <strong>Nets</strong> icon in the sidebar to open the Nets drawer. Here you’ll see:</p>
+<ul>
+<li>A list of all named nets in your project</li>
+<li>Which holes and components are connected to each net</li>
+<li>Color indicators for easy identification</li>
+</ul>
+<p>The Nets drawer gives you a bird’s-eye view of your circuit’s connectivity.</p>
+<p><img src="/images/tutorials/wiring-and-nets/nets-drawer.png" alt="Nets drawer listing all named nets with connection counts and color indicators"/></p>
+<hr/>
+<h2 id="5-rename-a-net">5. Rename a net</h2>
+<p>By default, nets get automatic names. To give them meaningful labels:</p>
+<ol>
+<li>Open the <strong>Nets</strong> drawer.</li>
+<li>Click on a net name.</li>
+<li>Type a descriptive name like “VCC”, “GND”, “LED_ANODE”, or “SENSOR_OUT”.</li>
+<li>Press <strong>Enter</strong> to confirm.</li>
+</ol>
+<p>Good net names make complex circuits much easier to debug and share.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> Name your power and ground nets first. It makes everything else easier to follow.</p>
+</blockquote>
+<hr/>
+<h2 id="6-delete-a-wire">6. Delete a wire</h2>
+<p>Two ways to remove a wire:</p>
+<ul>
+<li><strong>Erase tool</strong> — press <strong>E</strong>, then click the wire</li>
+<li><strong>Select and delete</strong> — press <strong>V</strong>, click the wire, then press <strong>Delete</strong></li>
+</ul>
+<p>Deleting a wire removes only that wire. If other wires or strips still connect the same holes, the net remains intact.</p>
+<hr/>
+<h2 id="7-understanding-power-rails">7. Understanding power rails</h2>
+<p>The breadboard has four power rails:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Rail</th><th>Position</th><th>Typical use</th></tr></thead><tbody><tr><td><strong>Top +</strong> (red)</td><td>Top edge</td><td>Positive voltage (e.g., 5V)</td></tr><tr><td><strong>Top −</strong> (black)</td><td>Top edge</td><td>Ground or negative</td></tr><tr><td><strong>Bottom +</strong> (red)</td><td>Bottom edge</td><td>Positive voltage</td></tr><tr><td><strong>Bottom −</strong> (black)</td><td>Bottom edge</td><td>Ground or negative</td></tr></tbody></table>
+<p>How these rails are configured depends on your project’s power settings. You’ll learn to customize this in <a href="/tutorials/power-configuration.mdx">Power Configuration</a>.</p>
+<p>To use a power rail, simply wire from a component pin to a hole on the rail strip.</p>
+<p><img src="/images/tutorials/wiring-and-nets/power-rails.png" alt="The four power rails labeled — Top + (red), Top − (black), Bottom + (red), Bottom − (black)"/></p>
+<hr/>
+<h2 id="what-you-learned">What you learned</h2>
+<ul>
+<li>Drawing wires with two clicks</li>
+<li>How terminal strips auto-connect groups of 5 holes</li>
+<li>Hovering to highlight entire nets</li>
+<li>Using the Nets drawer to view and rename connections</li>
+<li>Deleting wires without breaking other connections</li>
+<li>The four power rails and their typical roles</li>
+</ul>
+<h2 id="next-up">Next up</h2>
+<p>Keep your work tidy. Learn how to manage multiple projects in <a href="/tutorials/projects-and-organization.mdx">Projects &amp; Organization</a>.</p> </div> <div class="mt-12 border-t border-white/10 pt-8"> <a href="/tutorials" class="text-sm text-blue-400 hover:underline">← Back to Tutorials</a> </div> </article>  </main> <footer class="border-t border-white/10 bg-[#0a0d14]"> <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6"> <div class="grid grid-cols-2 gap-8 md:grid-cols-4"> <!-- Brand --> <div class="col-span-2 md:col-span-1"> <a href="/" class="text-lg font-bold text-white">
+NoWires<span class="text-amber-400">.AI</span> </a> <p class="mt-3 text-sm text-slate-500">
+Build smarter circuits with AI. Virtual breadboard meets real hardware.
+</p> <!-- Socials --> <div class="mt-4 flex gap-3"> <a href="https://twitter.com/nowires_ai" class="text-slate-500 hover:text-white" aria-label="Twitter/X"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path> </svg> </a> </div> </div> <div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Product</h3> <ul class="space-y-2"> <li> <a href="/features" class="text-sm text-slate-400 hover:text-white">Features</a> </li><li> <a href="/pricing" class="text-sm text-slate-400 hover:text-white">Pricing</a> </li><li> <a href="/app" class="text-sm text-slate-400 hover:text-white">Open App</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Resources</h3> <ul class="space-y-2"> <li> <a href="/tutorials" class="text-sm text-slate-400 hover:text-white">Tutorials</a> </li><li> <a href="/blog" class="text-sm text-slate-400 hover:text-white">Blog</a> </li> </ul> </div><div> <h3 class="mb-3 text-xs font-semibold uppercase tracking-widest text-slate-500">Company</h3> <ul class="space-y-2"> <li> <a href="/about" class="text-sm text-slate-400 hover:text-white">About</a> </li><li> <a href="/contact" class="text-sm text-slate-400 hover:text-white">Contact</a> </li> </ul> </div> </div> <div class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-slate-600">
+© 2026 NoWires.AI — Built with ❤️ for makers
+</div> </div> </footer> </body></html>
