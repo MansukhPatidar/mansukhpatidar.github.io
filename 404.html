@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+<script>
+  // Community routes that use client-side routing
+  var segments = window.location.pathname.split('/').filter(Boolean);
+  var routes = {
+    'projects': '/community/projects/',
+    'users': '/community/users/',
+    'components': '/community/components/',
+    'blocks': '/community/blocks/',
+    'features-and-bugs': '/community/features-and-bugs/'
+  };
+  if (segments[0] === 'community' && segments.length >= 3 && routes[segments[1]]) {
+    // Store the full path so the destination page can read it
+    sessionStorage.setItem('gh-pages-redirect', window.location.pathname);
+    window.location.replace(routes[segments[1]]);
+  } else {
+    // For non-community 404s, redirect to home
+    window.location.replace('/');
+  }
+</script>
+</body>
+</html>
